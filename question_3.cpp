@@ -85,6 +85,12 @@ public:
         return tong / 6;
     }
 
+    // Lấy điểm môn học
+    float layDiemMon(int maMonHoc)
+    {
+        return monHoc[maMonHoc].layDiemMonHoc();
+    }
+
     // In ra sinh viên
     void inSinhVien()
     {
@@ -104,6 +110,16 @@ public:
              << "Điểm trung bình: " << diemTrungBinh() << "\n";
     };
 };
+
+float diemTrungBinhMon(SinhVien sv[], int soLuong, int maMonHoc)
+{
+    float tong = 0;
+    for (int i = 0; i < soLuong; i++)
+    {
+        tong += sv[i].layDiemMon(maMonHoc);
+    }
+    return tong / soLuong;
+}
 
 int main()
 {
@@ -165,5 +181,12 @@ int main()
     for (int i = 0; i < soLuong; i++)
     {
         sv[i].inSinhVien();
+    }
+
+    // Điểm trung bình
+    cout << "\n\n===== Điểm trung bình =====\n";
+    for (int i = 0; i < 6; i++)
+    {
+        cout << "Điểm trung bình môn " << i + 1 << ": " << diemTrungBinhMon(sv, soLuong, i) << "\n";
     }
 }

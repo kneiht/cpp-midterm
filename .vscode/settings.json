@@ -2,7 +2,8 @@
   "files.associations": {
     "*.dbclient-js": "javascript",
     "typeinfo": "cpp",
-    "__locale": "cpp"
+    "__locale": "cpp",
+    "iostream": "cpp"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "ms-vscode.cpptools"
