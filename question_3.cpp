@@ -74,6 +74,17 @@ public:
         }
     }
 
+    // Điểm trung bình sinh viên
+    float diemTrungBinh()
+    {
+        float tong = 0;
+        for (int i = 0; i < 6; i++)
+        {
+            tong += monHoc[i].layDiemMonHoc();
+        }
+        return tong / 6;
+    }
+
     // In ra sinh viên
     void inSinhVien()
     {
@@ -89,7 +100,8 @@ public:
              << "Điểm môn Văn: " << monHoc[3].layDiemMonHoc() << "\n"
              << "Điểm môn Sử: " << monHoc[4].layDiemMonHoc() << "\n"
              << "Điểm môn Địa: " << monHoc[5].layDiemMonHoc() << "\n"
-             << "\n";
+             << "\n"
+             << "Điểm trung bình: " << diemTrungBinh() << "\n";
     };
 };
 
